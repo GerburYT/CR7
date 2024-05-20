@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristiano Ronaldo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #141E30, #243B55);
+            margin: 0;
+            color: white;
+            overflow-y: scroll;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #FFDD00;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #FFDD00;
+            color: #141E30;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .button:hover {
+            background-color: #FFC107;
+            transform: translateY(-3px);
+        }
+        .section {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-left: 4px solid #FFDD00;
+            border-radius: 5px;
+            animation: fadeIn 0.5s ease;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .button {
+                font-size: 16px;
+                padding: 12px;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            .button {
+                font-size: 14px;
+                padding: 10px;
+            }
+            p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cristiano Ronaldo</h1>
+        <p>Cristiano Ronaldo is a Portuguese professional footballer who plays as a forward. Widely regarded as one of the greatest football players of all time, Ronaldo has won numerous awards and broken many records during his illustrious career. His journey from a young boy with a dream to a global football icon is nothing short of inspirational. Known for his exceptional athleticism, precise finishing, and remarkable consistency, Ronaldo has left an indelible mark on the sport. Off the field, he is also a successful entrepreneur and a philanthropist, dedicated to making a positive impact on the world.</p>
+        
+        <button class="button" onclick="toggleSection('earlyLife')">Early Life</button>
+        <div id="earlyLife" class="section">
+            <p>Cristiano Ronaldo dos Santos Aveiro was born on February 5, 1985, in Funchal, Madeira, Portugal. He grew up in a humble family, the youngest of four children. His father, José Dinis Aveiro, worked as a municipal gardener, while his mother, Maria Dolores dos Santos Aveiro, was a cook. From a young age, Ronaldo showed a passion for football, often skipping meals and sneaking out of his bedroom window with a ball. At the age of 12, he moved to Lisbon to join Sporting CP’s academy, leaving his family behind in Madeira. Despite the challenges and homesickness, his determination and talent quickly set him apart from his peers.</p>
+        </div>
+        
+        <button class="button" onclick="toggleSection('career')">Career</button>
+        <div id="career" class="section">
+            <p>Ronaldo's professional career began with Sporting CP, where he impressed with his skills and agility. In 2003, at just 18 years old, he caught the eye of Manchester United's manager Sir Alex Ferguson, who signed him for £12.24 million, a record fee for a player of his age. At Manchester United, Ronaldo developed into one of the best players in the world, winning three Premier League titles, a FA Cup, two Football League Cups, and the UEFA Champions League. In 2009, he transferred to Real Madrid for a then-world record transfer fee of €94 million. At Real Madrid, Ronaldo's career soared to new heights. He won four Champions League titles, two La Liga titles, and became the club's all-time top scorer with 451 goals. In 2018, he moved to Juventus, where he continued his success, winning two Serie A titles. In 2021, he returned to Manchester United, and in 2023, he joined Al Nassr in Saudi Arabia, further extending his illustrious career.</p>
+        </div>
+        
+        <button class="button" onclick="toggleSection('achievements')">Achievements</button>
+        <div id="achievements" class="section">
+            <p>Ronaldo's achievements are unparalleled in the world of football. He has won five Ballon d'Or awards, given to the best player in the world, and four European Golden Shoes, awarded to the top scorer in European leagues. His trophy cabinet includes seven league titles, three domestic cups, and five UEFA Champions League titles. Ronaldo has also excelled on the international stage, leading Portugal to their first major tournament victory at Euro 2016 and winning the UEFA Nations League in 2019. His dedication to excellence and his ability to perform under pressure have earned him numerous individual awards and records.</p>
+        </div>
+        
+        <button class="button" onclick="toggleSection('records')">Records</button>
+        <div id="records" class="section">
+            <p>Ronaldo holds numerous records that showcase his extraordinary career. He is the all-time top scorer in the UEFA Champions League, with over 130 goals. He also holds the record for the most goals scored in a single UEFA Champions League season (17) and the most goals scored in international football by a European player. Additionally, Ronaldo is the first player to score in ten consecutive international tournaments and has scored over 800 career goals for club and country, making him one of the highest-scoring players in the history of the sport.</p>
+        </div>
+        
+        <button class="button" onclick="toggleSection('family')">Family</button>
+        <div id="family" class="section">
+            <p>Cristiano Ronaldo has four children: Cristiano Jr., twins Eva and Mateo, and Alana Martina. Cristiano Jr., born in 2010, is already showing promise as a young footballer, following in his father's footsteps. In 2017, Ronaldo welcomed twins Eva and Mateo via surrogacy. Later that year, his girlfriend Georgina Rodríguez gave birth to their daughter, Alana Martina. Ronaldo is known to be very close to his family, often sharing moments with them on social media. His mother, Maria Dolores, plays a significant role in his life, and he frequently credits her for his success and support throughout his career.</p>
+        </div>
+        
+        <button class="button" onclick="toggleSection('philanthropy')">Philanthropy</button>
+        <div id="philanthropy" class="section">
+            <p>Ronaldo is also known for his philanthropy, having donated millions to various causes, including children's hospitals, disaster relief efforts, and the fight against COVID-19. He has funded surgeries for children, donated to cancer centers, and supported disaster relief efforts worldwide. In 2015, Ronaldo was named the world's most charitable athlete by dosomething.org for his contributions to various causes. He frequently uses his platform to raise awareness for important issues and has auctioned off personal items to raise funds for charity. Ronaldo's philanthropic efforts reflect his desire to give back to the community and help those in need.</p>
+        </div>
+
+        <button class="button" onclick="toggleSection('personalLife')">Personal Life</button>
+        <div id="personalLife" class="section">
+            <p>Off the pitch, Ronaldo is known for his luxurious lifestyle and business ventures. He has his own fashion brand, CR7, which includes clothing, footwear, and fragrances. Ronaldo also owns several hotels and gyms under the CR7 brand. He is passionate about fitness and maintains a rigorous training regimen, which he often shares with his fans on social media. Despite his fame and fortune, Ronaldo values his privacy and cherishes spending time with his family. He is also multilingual, speaking Portuguese, Spanish, and English fluently. Ronaldo's personal life reflects his commitment to excellence, both professionally and personally.</p>
+        </div>
+
+        <button class="button" onclick="toggleSection('controversies')">Controversies</button>
+        <div id="controversies" class="section">
+            <p>Like many high-profile athletes, Ronaldo has faced his share of controversies. In 2017, he was accused of tax evasion by the Spanish authorities, resulting in a court case and a settlement. Additionally, Ronaldo has been involved in legal disputes and public disputes with former teams and managers. Despite these challenges, he has remained one of the most marketable and popular athletes in the world. Ronaldo's ability to maintain his performance on the field while navigating controversies off the field demonstrates his resilience and focus.</p>
+        </div>
+
+        <button class="button" onclick="toggleSection('legacy')">Legacy</button>
+        <div id="legacy" class="section">
+            <p>Ronaldo's legacy is defined by his extraordinary talent, work ethic, and impact on the sport. He has inspired a generation of young footballers with his dedication, discipline, and desire to be the best. Ronaldo's influence extends beyond football, as he is a global icon in sports and popular culture. His rivalry with Lionel Messi has been one of the most celebrated in sports history, pushing both players to unprecedented heights. Ronaldo's contributions to football, his philanthropic efforts, and his business ventures ensure that his legacy will endure long after he retires from the sport. He remains a symbol of excellence and perseverance, and his journey continues to inspire millions around the world.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="https://www.mykhel.com/img/2020/10/ronaldocropped_ao4jbk7y211z1d9kk96vp1qpc.jpg" alt="Cristiano Ronaldo">
+        </div>
+    </div>
+</body>
+</html>
